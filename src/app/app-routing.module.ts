@@ -4,11 +4,10 @@ import { HomePageComponent } from './shared/pages/home-page/home-page.component'
 import { AboutPageComponent } from './shared/pages/about-page/about-page.component';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
 
-const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: HomePageComponent
-  // },
+/**
+ *  Definición de cada una de las rutas de la aplicación
+ */
+const routes: Routes = [  
   {
     path: 'about',
     component: AboutPageComponent
@@ -19,10 +18,11 @@ const routes: Routes = [
   },
   {
     path: 'countries',
-    // cargar los hijos
+    // cargar los hijos de manera perezosa
     loadChildren: () => import('./countries/countries.module').then( m => m.CountriesModule )
   },
   {
+    // cualquier otra ruta que no este definida va a navergar a countries
     path: '**',
     redirectTo: 'countries'
   }
