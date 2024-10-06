@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CountriesService } from '../../services/countries.service';
+import { Country } from '../../interfaces/country';
 
 @Component({
   selector: 'app-by-capital-page',
@@ -12,10 +14,27 @@ export class ByCapitalPageComponent {
    * El usuario escribe el nombre de una capital en el campo de búsqueda y presiona Enter.
    * El componente hijo SearchBoxComponent emite el valor ingresado.
    * El componente padre escucha el evento y llama al método searchByCapital(term).
-   * @param term: El término de búsqueda ingresado (nombre de la capital).
+   */
+
+  /**
+   * public countries: Country[]: Almacena los resultados de la búsqueda, es decir, la lista de países que coinciden con la capital buscada.
+   * Tipo: Country[] (una lista de objetos que implementan la interfaz Country).
+   */
+  public countries: Country[] = [];
+  
+  constructor(
+    private countriesServices: CountriesService
+  ){}
+
+  /**
+   * Este método se invoca cuando el usuario ingresa el nombre de una capital y presiona Enter. Llama al servicio CountriesService para realizar 
+   * la búsqueda de países por capital y actualiza la propiedad countries con los resultados obtenidos.
+   * @param term El término de búsqueda (nombre de la capital) ingresado por el usuario.
    */
   searchByCapital( term: string): void {
-    console.log('Desde ByCapitalPage');
-    console.log({term});
+    this.countriesServices.searchCapital( term )
+      .subscribe( countries =>{
+        this.countries = countries;
+      });
   }
 }
