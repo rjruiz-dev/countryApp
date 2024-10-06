@@ -1,9 +1,12 @@
+<!-- Este componente padre se encarga de recibir y manejar el valor emitido por el componente hijo SearchBoxComponent. 
+ Permite al usuario buscar por el nombre de una capital y muestra los resultados. -->
 <h2>Por Capital</h2>
 <hr>
 
 <div class="row">
     <div class="col">
-        <!-- search box -->
+        <!-- (onValue)="searchByCapital($event)": Escucha el evento onValue emitido 
+         por el componente hijo y ejecuta el método searchByCapital del componente padre con el valor ingresado como argumento. -->
         <shared-search-box 
             (onValue)="searchByCapital($event)"
             placeholder="Buscar por capital"
