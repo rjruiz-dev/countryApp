@@ -14,6 +14,15 @@ export class CountriesService {
     private apiUrl: string = 'https://restcountries.com/v3.1'
     constructor(private http: HttpClient) { }
 
+    searchCountryByAlphaCode(code: string): Observable<Country[]>{
+        const url = `${ this.apiUrl }/alpha/${ code }`;
+        return this.http.get<Country[]>( url )           
+        .pipe(                
+            catchError(() => of([]))
+        );
+    }
+
+
     /**
      * Este método realiza una solicitud HTTP GET a la API restcountries.com para buscar países por el nombre de la capital ingresado. 
      * Devuelve un Observable que emite una lista de objetos Country (definidos en la interfaz Country).
@@ -22,7 +31,7 @@ export class CountriesService {
      * Si no se encuentran resultados, el observable emitirá un array vacío.
      */
     searchCapital( term: string ): Observable<Country[]> {
-        const url = `${ this.apiUrl }/capital/${ term }` 
+        const url = `${ this.apiUrl }/capital/${ term }`; 
         return this.http.get<Country[]>( url )
             // pipe(): Permite aplicar operadores RxJS al observable resultante de la solicitud HTTP.
             .pipe(
@@ -32,7 +41,7 @@ export class CountriesService {
     }
 
     searchCountry( term: string ): Observable<Country[]>{
-        const url = `${ this.apiUrl }/name/${ term }` 
+        const url = `${ this.apiUrl }/name/${ term }`; 
         return this.http.get<Country[]>( url )           
             .pipe(                
                 catchError(() => of([]))
@@ -40,7 +49,7 @@ export class CountriesService {
     }
     
     searchRegion( region: string ): Observable<Country[]>{
-        const url = `${ this.apiUrl }/region/${ region }` 
+        const url = `${ this.apiUrl }/region/${ region }`; 
         return this.http.get<Country[]>( url )           
             .pipe(                
                 catchError(() => of([]))
