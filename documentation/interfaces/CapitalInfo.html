@@ -79,176 +79,246 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content interface">
                    <div class="content-data">
 
 
 
 
+
+
+
+
+
+
+
+
+
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item">Interfaces</li>
   <li class="breadcrumb-item"
   >
-  ByCountryPageComponent</li>
+  CapitalInfo</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a href="#info" class="nav-link active"
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
                 role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
         <li class="nav-item">
-            <a href="#source" class="nav-link"
+            <a href="#source" 
+                class="nav-link"
+                
                 role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li class="nav-item">
-            <a href="#templateData" class="nav-link"
-                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li class="nav-item">
-            <a href="#styleData" class="nav-link"
-                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li class="nav-item">
-            <a href="#tree" class="nav-link"
-                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/countries/pages/by-country-page/by-country-page.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/countries/interfaces/country.ts</code>
+        </p>
+
+
+
+
+        <section data-compodoc="block-index">
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#latlng" 
+>
+                                            latlng
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section data-compodoc="block-properties">
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="latlng"></a>
+                                        <span class="name "><b>latlng</b>
+                                            <a href="#latlng">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>latlng:     <code>number[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>number[]</code>
+
+                                        </td>
+                                    </tr>
 
 
 
 
 
-
-<section data-compodoc="block-metadata">
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover metadata">
-        <tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-by-country-page</code></td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-3">styles</td>
-                <td class="col-md-9"><code></code></td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./by-country-page.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-
-
-
-
-
-
-
-
-</div>
+                        </tbody>
+                    </table>
+            </section>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface Country {
+    name:         Name;
+    tld:          string[];
+    cca2:         string;
+    ccn3:         string;
+    cca3:         string;
+    cioc:         string;
+    independent:  boolean;
+    status:       string;
+    unMember:     boolean;
+    currencies:   Currencies;
+    idd:          Idd;
+    capital:      string[];
+    altSpellings: string[];
+    region:       string;
+    subregion:    string;
+    languages:    Languages;
+    translations: { [key: string]: Translation };
+    latlng:       number[];
+    landlocked:   boolean;
+    borders?:     string[];
+    area:         number;
+    demonyms:     Demonyms;
+    flag:         string;
+    maps:         Maps;
+    population:   number;
+    gini?:        { [key: string]: number };
+    fifa:         string;
+    car:          Car;
+    timezones:    string[];
+    continents:   string[];
+    flags:        Flags;
+    coatOfArms:   CoatOfArms;
+    startOfWeek:  string;
+    capitalInfo:  CapitalInfo;
+    postalCode?:  PostalCode;
+}
 
-@Component({
-  selector: &#x27;app-by-country-page&#x27;,
-  templateUrl: &#x27;./by-country-page.component.html&#x27;,
-  styles: &#x60;&#x60;
-})
-export class ByCountryPageComponent {
+export interface CapitalInfo {
+    latlng: number[];
+}
 
+export interface Car {
+    signs: string[];
+    side:  string;
+}
+
+export interface CoatOfArms {
+    png?: string;
+    svg?: string;
+}
+
+export interface Currencies {
+    USD?: Clp;
+    DOP?: Clp;
+    CRC?: Clp;
+    CLP?: Clp;
+    YER?: Clp;
+    EUR?: Clp;
+}
+
+export interface Clp {
+    name:   string;
+    symbol: string;
+}
+
+export interface Demonyms {
+    eng: Eng;
+    fra: Eng;
+}
+
+export interface Eng {
+    f: string;
+    m: string;
+}
+
+export interface Flags {
+    png:  string;
+    svg:  string;
+    alt?: string;
+}
+
+export interface Idd {
+    root:     string;
+    suffixes: string[];
+}
+
+export interface Languages {
+    spa?: string;
+    eng?: string;
+    ara?: string;
+    ita?: string;
+}
+
+export interface Maps {
+    googleMaps:     string;
+    openStreetMaps: string;
+}
+
+export interface Name {
+    common:     string;
+    official:   string;
+    nativeName: NativeName;
+}
+
+export interface NativeName {
+    spa?: Translation;
+    eng?: Translation;
+    ara?: Translation;
+    ita?: Translation;
+}
+
+export interface Translation {
+    official: string;
+    common:   string;
+}
+
+export interface PostalCode {
+    format: string;
+    regex:  string;
 }
 </code></pre>
     </div>
-
-    <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;by-country-page works!&lt;/p&gt;
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="styleData">
-            <pre class="line-numbers"><code class="language-scss">
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><p>by-country-page works!</p></div>'
-    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'shared-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ByCapitalPageComponent', 'selector': 'app-by-capital-page'},{'name': 'ByCountryPageComponent', 'selector': 'app-by-country-page'},{'name': 'ByRegionPageComponent', 'selector': 'app-by-region-page'},{'name': 'ContactPageComponent', 'selector': 'shared-contact-page'},{'name': 'CountryPageComponent', 'selector': 'app-country-page'},{'name': 'CountryTableComponent', 'selector': 'countries-table'},{'name': 'HomePageComponent', 'selector': 'shared-home-page'},{'name': 'SearchBoxComponent', 'selector': 'shared-search-box'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ByCountryPageComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -282,8 +352,8 @@ export class ByCountryPageComponent {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ByCountryPageComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'CapitalInfo.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

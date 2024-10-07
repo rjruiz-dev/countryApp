@@ -203,23 +203,7 @@ export class SidebarComponent {
         <pre class="line-numbers"><code class="language-html">&lt;h2&gt;Países&lt;/h2&gt;
 &lt;hr&gt;
 
-&lt;ul class&#x3D;&quot;list-group&quot;&gt; 
-    &lt;!-- &lt;li routerLink&#x3D;&quot;&quot;
-        [routerLinkActiveOptions]&#x3D;&quot;{ exact: true }&quot;
-        routerLinkActive&#x3D;&quot;active&quot;
-        class&#x3D;&quot;list-group-item&quot;&gt;
-        Home Page
-    &lt;/li&gt;
-    &lt;li routerLink&#x3D;&quot;about&quot;
-        routerLinkActive&#x3D;&quot;active&quot;
-        class&#x3D;&quot;list-group-item active&quot;&gt;
-        About Page
-    &lt;/li&gt;
-    &lt;li routerLink&#x3D;&quot;contact&quot;
-        routerLinkActive&#x3D;&quot;active&quot;
-        class&#x3D;&quot;list-group-item active&quot;&gt;
-        Contact Page
-    &lt;/li&gt; --&gt;
+&lt;ul class&#x3D;&quot;list-group&quot;&gt;     
     &lt;li routerLink&#x3D;&quot;countries/by-capital&quot;
         routerLinkActive&#x3D;&quot;active&quot;
         class&#x3D;&quot;list-group-item active&quot;&gt;
@@ -269,8 +253,8 @@ export class SidebarComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h2>Países</h2><hr><ul class="list-group">     <!-- <li routerLink=""        [routerLinkActiveOptions]="{ exact: true }"        routerLinkActive="active"        class="list-group-item">        Home Page    </li>    <li routerLink="about"        routerLinkActive="active"        class="list-group-item active">        About Page    </li>    <li routerLink="contact"        routerLinkActive="active"        class="list-group-item active">        Contact Page    </li> -->    <li routerLink="countries/by-capital"        routerLinkActive="active"        class="list-group-item active">        Por capital    </li>    <li routerLink="countries/by-country"        routerLinkActive="active"        class="list-group-item active">        Por país    </li>    <li routerLink="countries/by-region"        routerLinkActive="active"        class="list-group-item active">        Por region    </li></ul></div>'
-    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'shared-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ByCapitalPageComponent', 'selector': 'app-by-capital-page'},{'name': 'ByCountryPageComponent', 'selector': 'app-by-country-page'},{'name': 'ByRegionPageComponent', 'selector': 'app-by-region-page'},{'name': 'ContactPageComponent', 'selector': 'shared-contact-page'},{'name': 'CountryPageComponent', 'selector': 'app-country-page'},{'name': 'HomePageComponent', 'selector': 'shared-home-page'},{'name': 'SearchBoxComponent', 'selector': 'shared-search-box'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
+        var COMPONENT_TEMPLATE = '<div><h2>Países</h2><hr><ul class="list-group">         <li routerLink="countries/by-capital"        routerLinkActive="active"        class="list-group-item active">        Por capital    </li>    <li routerLink="countries/by-country"        routerLinkActive="active"        class="list-group-item active">        Por país    </li>    <li routerLink="countries/by-region"        routerLinkActive="active"        class="list-group-item active">        Por region    </li></ul></div>'
+    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'shared-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ByCapitalPageComponent', 'selector': 'app-by-capital-page'},{'name': 'ByCountryPageComponent', 'selector': 'app-by-country-page'},{'name': 'ByRegionPageComponent', 'selector': 'app-by-region-page'},{'name': 'ContactPageComponent', 'selector': 'shared-contact-page'},{'name': 'CountryPageComponent', 'selector': 'app-country-page'},{'name': 'CountryTableComponent', 'selector': 'countries-table'},{'name': 'HomePageComponent', 'selector': 'shared-home-page'},{'name': 'SearchBoxComponent', 'selector': 'shared-search-box'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SidebarComponent'};
 </script>

@@ -59,13 +59,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link" >AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                            'data-bs-target="#components-links-module-AppModule-14afd4291d5b79d6079415b74e58da056e1e196a1668ed3940bb7dd398a1268c33f1f5becba4d0ee577d4dedab9bff68977ac9ec63b3bb68fe1eb418b4a722ea"' : 'data-bs-target="#xs-components-links-module-AppModule-14afd4291d5b79d6079415b74e58da056e1e196a1668ed3940bb7dd398a1268c33f1f5becba4d0ee577d4dedab9bff68977ac9ec63b3bb68fe1eb418b4a722ea"' }>
+                                            'data-bs-target="#components-links-module-AppModule-fe122a96b81e4b647542a0d3483ded77b391a84807d3fc7baa43d38d6277b4cfd70d86558518971e8ed12b9cfae11abdf936630fd569eb0095927b163e8911e6"' : 'data-bs-target="#xs-components-links-module-AppModule-fe122a96b81e4b647542a0d3483ded77b391a84807d3fc7baa43d38d6277b4cfd70d86558518971e8ed12b9cfae11abdf936630fd569eb0095927b163e8911e6"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-14afd4291d5b79d6079415b74e58da056e1e196a1668ed3940bb7dd398a1268c33f1f5becba4d0ee577d4dedab9bff68977ac9ec63b3bb68fe1eb418b4a722ea"' :
-                                            'id="xs-components-links-module-AppModule-14afd4291d5b79d6079415b74e58da056e1e196a1668ed3940bb7dd398a1268c33f1f5becba4d0ee577d4dedab9bff68977ac9ec63b3bb68fe1eb418b4a722ea"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-fe122a96b81e4b647542a0d3483ded77b391a84807d3fc7baa43d38d6277b4cfd70d86558518971e8ed12b9cfae11abdf936630fd569eb0095927b163e8911e6"' :
+                                            'id="xs-components-links-module-AppModule-fe122a96b81e4b647542a0d3483ded77b391a84807d3fc7baa43d38d6277b4cfd70d86558518971e8ed12b9cfae11abdf936630fd569eb0095927b163e8911e6"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AppComponent</a>
                                             </li>
@@ -79,13 +79,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/CountriesModule.html" data-type="entity-link" >CountriesModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                            'data-bs-target="#components-links-module-CountriesModule-83d20f2f8ca1f19e323e552302d58adbdc6951f939c3f6f427f46065b1d53933637d9d7c12c4e4c53fa21b6578d033446b151fd99bdad859683794aafcac33ce"' : 'data-bs-target="#xs-components-links-module-CountriesModule-83d20f2f8ca1f19e323e552302d58adbdc6951f939c3f6f427f46065b1d53933637d9d7c12c4e4c53fa21b6578d033446b151fd99bdad859683794aafcac33ce"' }>
+                                            'data-bs-target="#components-links-module-CountriesModule-6feacf2660bc99c0b1d6daecb923bd021893a1fd5a0119e0d203d027cb320533adbaca588943e7818c087511f19d31605f2a6d480b588512839a6962feb8bb33"' : 'data-bs-target="#xs-components-links-module-CountriesModule-6feacf2660bc99c0b1d6daecb923bd021893a1fd5a0119e0d203d027cb320533adbaca588943e7818c087511f19d31605f2a6d480b588512839a6962feb8bb33"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-CountriesModule-83d20f2f8ca1f19e323e552302d58adbdc6951f939c3f6f427f46065b1d53933637d9d7c12c4e4c53fa21b6578d033446b151fd99bdad859683794aafcac33ce"' :
-                                            'id="xs-components-links-module-CountriesModule-83d20f2f8ca1f19e323e552302d58adbdc6951f939c3f6f427f46065b1d53933637d9d7c12c4e4c53fa21b6578d033446b151fd99bdad859683794aafcac33ce"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-CountriesModule-6feacf2660bc99c0b1d6daecb923bd021893a1fd5a0119e0d203d027cb320533adbaca588943e7818c087511f19d31605f2a6d480b588512839a6962feb8bb33"' :
+                                            'id="xs-components-links-module-CountriesModule-6feacf2660bc99c0b1d6daecb923bd021893a1fd5a0119e0d203d027cb320533adbaca588943e7818c087511f19d31605f2a6d480b588512839a6962feb8bb33"' }>
                                             <li class="link">
                                                 <a href="components/ByCapitalPageComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ByCapitalPageComponent</a>
                                             </li>
@@ -97,6 +97,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                             <li class="link">
                                                 <a href="components/CountryPageComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CountryPageComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/CountryTableComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CountryTableComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -135,6 +138,77 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
+                        <li class="chapter">
+                            <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#injectables-links"' :
+                                'data-bs-target="#xs-injectables-links"' }>
+                                <span class="icon ion-md-arrow-round-down"></span>
+                                <span>Injectables</span>
+                                <span class="icon ion-ios-arrow-down"></span>
+                            </div>
+                            <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
+                                <li class="link">
+                                    <a href="injectables/CountriesService.html" data-type="entity-link" >CountriesService</a>
+                                </li>
+                            </ul>
+                        </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#interfaces-links"' :
+                            'data-bs-target="#xs-interfaces-links"' }>
+                            <span class="icon ion-md-information-circle-outline"></span>
+                            <span>Interfaces</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/CapitalInfo.html" data-type="entity-link" >CapitalInfo</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Car.html" data-type="entity-link" >Car</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Clp.html" data-type="entity-link" >Clp</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CoatOfArms.html" data-type="entity-link" >CoatOfArms</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Country.html" data-type="entity-link" >Country</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Currencies.html" data-type="entity-link" >Currencies</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Demonyms.html" data-type="entity-link" >Demonyms</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Eng.html" data-type="entity-link" >Eng</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Flags.html" data-type="entity-link" >Flags</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Idd.html" data-type="entity-link" >Idd</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Languages.html" data-type="entity-link" >Languages</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Maps.html" data-type="entity-link" >Maps</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Name.html" data-type="entity-link" >Name</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/NativeName.html" data-type="entity-link" >NativeName</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/PostalCode.html" data-type="entity-link" >PostalCode</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Translation.html" data-type="entity-link" >Translation</a>
+                            </li>
+                        </ul>
+                    </li>
                         <li class="chapter">
                             <a data-type="chapter-link" href="routes.html"><span class="icon ion-ios-git-branch"></span>Routes</a>
                         </li>

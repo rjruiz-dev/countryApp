@@ -79,102 +79,50 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Components</li>
-  <li class="breadcrumb-item"
-  >
-  ByCapitalPageComponent</li>
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >CountriesService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a href="#info" class="nav-link active"
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
                 role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
         <li class="nav-item">
-            <a href="#source" class="nav-link"
+            <a href="#source" 
+                class="nav-link"
+                
                 role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li class="nav-item">
-            <a href="#templateData" class="nav-link"
-                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li class="nav-item">
-            <a href="#styleData" class="nav-link"
-                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li class="nav-item">
-            <a href="#tree" class="nav-link"
-                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/countries/pages/by-capital-page/by-capital-page.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/countries/services/countries.service.ts</code>
+        </p>
 
 
 
 
 
-
-<section data-compodoc="block-metadata">
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover metadata">
-        <tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-by-capital-page</code></td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-3">styles</td>
-                <td class="col-md-9"><code></code></td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./by-capital-page.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section data-compodoc="block-index">
+            <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -187,8 +135,8 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#countries" >countries</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#apiUrl" >apiUrl</a>
                             </li>
                         </ul>
                     </td>
@@ -203,7 +151,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#searchByCapital" >searchByCapital</a>
+                                <a href="#searchCapital" >searchCapital</a>
                             </li>
                         </ul>
                     </td>
@@ -217,18 +165,18 @@
     </table>
 </section>
 
-    <section data-compodoc="block-constructor">
+            <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(countriesServices: <a href="../injectables/CountriesService.html" target="_self">CountriesService</a>)</code>
+<code>constructor(http: HttpClient)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/countries/pages/by-capital-page/by-capital-page.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/countries/services/countries.service.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -246,10 +194,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>countriesServices</td>
+                                                        <td>http</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/CountriesService.html" target="_self" >CountriesService</a></code>
+                                                                    <code>HttpClient</code>
                                                         </td>
                                                   
                                                     <td>
@@ -266,11 +214,7 @@
         </table>
 </section>
 
-
-
-
-
-    <section data-compodoc="block-methods">
+            <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -279,32 +223,33 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="searchByCapital"></a>
+                    <a name="searchCapital"></a>
                     <span class="name">
-                        <span ><b>searchByCapital</b></span>
-                        <a href="#searchByCapital"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>searchCapital</b></span>
+                        <a href="#searchCapital"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>searchByCapital(term: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>searchCapital(term: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="34"
-                                    class="link-to-prism">src/app/countries/pages/by-capital-page/by-capital-page.component.ts:34</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="28"
+                                    class="link-to-prism">src/app/countries/services/countries.service.ts:28</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>Este método se invoca cuando el usuario ingresa el nombre de una capital y presiona Enter. Llama al servicio CountriesService para realizar
-la búsqueda de países por capital y actualiza la propiedad countries con los resultados obtenidos.</p>
+                        <div class="io-description"><p>Este método realiza una solicitud HTTP GET a la API restcountries.com para buscar países por el nombre de la capital ingresado.
+Devuelve un Observable que emite una lista de objetos Country (definidos en la interfaz Country).
+Si no se encuentran resultados, el observable emitirá un array vacío.</p>
 </div>
 
                             <div class="io-description">
@@ -332,7 +277,7 @@ la búsqueda de países por capital y actualiza la propiedad countries con los r
 
 
                                             <td>
-                                                    <p>El término de búsqueda (nombre de la capital) ingresado por el usuario.</p>
+                                                    <p>: El nombre de la capital por la que se quiere buscar.</p>
 
                                             </td>
                                         </tr>
@@ -340,18 +285,20 @@ la búsqueda de países por capital y actualiza la propiedad countries con los r
                                 </table>
                             </div>
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                            <b>Returns : </b>        <code><a href="../interfaces/Country.html" target="_self" >Observable&lt;Country[]&gt;</a></code>
 
                         </div>
                             <div class="io-description">
-                                
+                                <p>Devuelve un Observable&lt;Country[]&gt; que emite que emite un array de objetos Country. 
+Si no se encuentran resultados, el observable emitirá un array vacío.</p>
+
                             </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </section>
-    <section data-compodoc="block-properties">
+            <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -360,35 +307,35 @@ la búsqueda de países por capital y actualiza la propiedad countries con los r
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="countries"></a>
+                    <a name="apiUrl"></a>
                     <span class="name">
-                            <span class="modifier">Public</span>
-                        <span ><b>countries</b></span>
-                        <a href="#countries"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier">Private</span>
+                        <span ><b>apiUrl</b></span>
+                        <a href="#apiUrl"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="../interfaces/Country.html" target="_self" >Country[]</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>[]</code>
+                        <i>Default value : </i><code>&#x27;https://restcountries.com/v3.1&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/countries/pages/by-capital-page/by-capital-page.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/countries/services/countries.service.ts:18</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>public countries: Country[]: Almacena los resultados de la búsqueda, es decir, la lista de países que coinciden con la capital buscada.
-Tipo: Country[] (una lista de objetos que implementan la interfaz Country).</p>
+                    <div class="io-description"><p>El servicio CountriesService es responsable de interactuar con una API externa para obtener información de países según el nombre de su capital.
+Utiliza el módulo HttpClient de Angular para hacer solicitudes HTTP y devuelve un observable de los resultados.</p>
 </div>
                 </td>
             </tr>
@@ -397,118 +344,51 @@ Tipo: Country[] (una lista de objetos que implementan la interfaz Country).</p>
     </table>
 </section>
 
-</div>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { CountriesService } from &#x27;../../services/countries.service&#x27;;
-import { Country } from &#x27;../../interfaces/country&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { catchError, Observable, of } from &#x27;rxjs&#x27;;
+import { Country } from &#x27;../interfaces/country&#x27;;
 
-@Component({
-  selector: &#x27;app-by-capital-page&#x27;,
-  templateUrl: &#x27;./by-capital-page.component.html&#x27;,
-  styles: &#x60;&#x60;
-})
-export class ByCapitalPageComponent {
-  /**
-   * El ByCapitalPageComponent es el componente principal encargado de manejar la funcionalidad de búsqueda por capitales. 
-   * Utiliza el componente hijo SearchBoxComponent para recibir un término de búsqueda ingresado por el usuario, y luego lo procesa
-   * El usuario escribe el nombre de una capital en el campo de búsqueda y presiona Enter.
-   * El componente hijo SearchBoxComponent emite el valor ingresado.
-   * El componente padre escucha el evento y llama al método searchByCapital(term).
-   */
+@Injectable({providedIn: &#x27;root&#x27;})
+/**
+ * El servicio CountriesService es responsable de interactuar con una API externa para obtener información de países según el nombre de su capital. 
+ * Utiliza el módulo HttpClient de Angular para hacer solicitudes HTTP y devuelve un observable de los resultados.
+ */
+export class CountriesService {
+    /**
+     * El servicio CountriesService es responsable de interactuar con una API externa para obtener información de países según el nombre de su capital. 
+     * Utiliza el módulo HttpClient de Angular para hacer solicitudes HTTP y devuelve un observable de los resultados.
+     */
 
-  /**
-   * public countries: Country[]: Almacena los resultados de la búsqueda, es decir, la lista de países que coinciden con la capital buscada.
-   * Tipo: Country[] (una lista de objetos que implementan la interfaz Country).
-   */
-  public countries: Country[] &#x3D; [];
-  
-  constructor(
-    private countriesServices: CountriesService
-  ){}
+    // apiUrl: Almacena la URL base de la API https://restcountries.com/v3.1, que es utilizada para hacer las solicitudes HTTP.
+    private apiUrl: string &#x3D; &#x27;https://restcountries.com/v3.1&#x27;
+    constructor(private http: HttpClient) { }
 
-  /**
-   * Este método se invoca cuando el usuario ingresa el nombre de una capital y presiona Enter. Llama al servicio CountriesService para realizar 
-   * la búsqueda de países por capital y actualiza la propiedad countries con los resultados obtenidos.
-   * @param term El término de búsqueda (nombre de la capital) ingresado por el usuario.
-   */
-  searchByCapital( term: string): void {
-    this.countriesServices.searchCapital( term )
-      .subscribe( countries &#x3D;&gt;{
-        this.countries &#x3D; countries;
-      });
-  }
-}
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!-- Este componente padre se encarga de recibir y manejar el valor emitido por el componente hijo SearchBoxComponent. 
- Permite al usuario buscar por el nombre de una capital y muestra los resultados. --&gt;
-&lt;h2&gt;Por Capital&lt;/h2&gt;
-&lt;hr&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-    &lt;div class&#x3D;&quot;col&quot;&gt;
-        &lt;!-- (onValue)&#x3D;&quot;searchByCapital($event)&quot;: Escucha el evento onValue emitido 
-         por el componente hijo y ejecuta el método searchByCapital del componente padre con el valor ingresado como argumento. --&gt;
-        &lt;shared-search-box 
-            (onValue)&#x3D;&quot;searchByCapital($event)&quot;
-            placeholder&#x3D;&quot;Buscar por capital&quot;
-        &gt;&lt;/shared-search-box&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;row&quot;&gt;
-    &lt;div class&#x3D;&quot;col&quot;&gt;
-        &lt;hr&gt;
-        &lt;countries-table [countries]&#x3D;&quot;countries&quot;&gt;&lt;/countries-table&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="styleData">
-            <pre class="line-numbers"><code class="language-scss">
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
+    /**
+     * Este método realiza una solicitud HTTP GET a la API restcountries.com para buscar países por el nombre de la capital ingresado. 
+     * Devuelve un Observable que emite una lista de objetos Country (definidos en la interfaz Country).
+     * @param term: El nombre de la capital por la que se quiere buscar. 
+     * @returns Devuelve un Observable&lt;Country[]&gt; que emite que emite un array de objetos Country. 
+     * Si no se encuentran resultados, el observable emitirá un array vacío.
+     */
+    searchCapital( term: string ): Observable&lt;Country[]&gt; {
+        const url &#x3D; &#x60;${ this.apiUrl }/capital/${ term }&#x60; 
+        return this.http.get&lt;Country[]&gt;( url )
+            // pipe(): Permite aplicar operadores RxJS al observable resultante de la solicitud HTTP.
+            .pipe(
+                // Es un operador que intercepta cualquier error en la solicitud HTTP y retorna un observable que emite un array vacío (of([])) en lugar de propagar el error.
+                catchError(() &#x3D;&gt; of([]))
+            );
+    }
     
+}</code></pre>
+    </div>
+
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><!-- Este componente padre se encarga de recibir y manejar el valor emitido por el componente hijo SearchBoxComponent.  Permite al usuario buscar por el nombre de una capital y muestra los resultados. --><h2>Por Capital</h2><hr><div class="row">    <div class="col">        <!-- (onValue)="searchByCapital($event)": Escucha el evento onValue emitido          por el componente hijo y ejecuta el método searchByCapital del componente padre con el valor ingresado como argumento. -->        <shared-search-box             (onValue)="searchByCapital($event)"            placeholder="Buscar por capital"        ></shared-search-box>    </div></div><div class="row">    <div class="col">        <hr>        <countries-table [countries]="countries"></countries-table>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AboutPageComponent', 'selector': 'shared-about-page'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ByCapitalPageComponent', 'selector': 'app-by-capital-page'},{'name': 'ByCountryPageComponent', 'selector': 'app-by-country-page'},{'name': 'ByRegionPageComponent', 'selector': 'app-by-region-page'},{'name': 'ContactPageComponent', 'selector': 'shared-contact-page'},{'name': 'CountryPageComponent', 'selector': 'app-country-page'},{'name': 'CountryTableComponent', 'selector': 'countries-table'},{'name': 'HomePageComponent', 'selector': 'shared-home-page'},{'name': 'SearchBoxComponent', 'selector': 'shared-search-box'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ByCapitalPageComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
 
 
 
@@ -547,8 +427,8 @@ export class ByCapitalPageComponent {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ByCapitalPageComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CountriesService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
