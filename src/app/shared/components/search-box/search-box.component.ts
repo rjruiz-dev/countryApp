@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { debounceTime, Subject } from 'rxjs';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { debounceTime, Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'shared-search-box',
@@ -11,11 +11,12 @@ import { debounceTime, Subject } from 'rxjs';
    * SearchBoxComponent es un componente reutilizable que consiste en un campo de entrada de texto (input). 
    * Permite al usuario ingresar texto y, al presionar la tecla Enter, emite el valor ingresado al componente padre a través de un evento.
    */
-export class SearchBoxComponent implements OnInit{
+export class SearchBoxComponent implements OnInit, OnDestroy{  
   /**
    * Tipo especial de observable
    */
   private debouncer: Subject<string> = new Subject<string>();
+  private debouncerSuscription?: Subscription;
 
   @Input()
   public placeholder: string = '';
@@ -34,14 +35,22 @@ export class SearchBoxComponent implements OnInit{
    * Hasta que el usuario deja de escribir por 1 seg entonces recien ahi le manda el valor al subscribe
    */
   ngOnInit(): void {
-    this.debouncer
+    this.debouncerSuscription = this.debouncer
     .pipe(
       debounceTime(500)
     )
     .subscribe( value => {
-      // console.log('debouncer value: ', value);
+      console.log('debouncer value: ', value);
       this.onDebounce.emit( value );
     })
+  }
+
+  /**
+   * Se manda a llamar cuando esta instancia del componente es destruida
+   * Es necesario hacerlo excepto para las peticones http
+   */
+  ngOnDestroy(): void {
+    this.debouncerSuscription?.unsubscribe();
   }
 
   /**
