@@ -21,6 +21,7 @@ export class ByCapitalPageComponent {
    * Tipo: Country[] (una lista de objetos que implementan la interfaz Country).
    */
   public countries: Country[] = [];
+  public isLoading: boolean = false;
   
   constructor(
     private countriesServices: CountriesService
@@ -32,9 +33,11 @@ export class ByCapitalPageComponent {
    * @param term El término de búsqueda (nombre de la capital) ingresado por el usuario.
    */
   searchByCapital( term: string): void {
+    this.isLoading = true;
     this.countriesServices.searchCapital( term )
-      .subscribe( countries =>{
-        this.countries = countries;
+    .subscribe( countries =>{
+      this.countries = countries;
+      this.isLoading = false;
       });
   }
 }
