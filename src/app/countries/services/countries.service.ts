@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, Observable, of } from 'rxjs';
+import { catchError, delay, map, Observable, of } from 'rxjs';
 import { Country } from '../interfaces/country';
 
 @Injectable({providedIn: 'root'})
@@ -20,7 +20,8 @@ export class CountriesService {
         // pipe(): Permite aplicar operadores RxJS al observable resultante de la solicitud HTTP.
         .pipe(
             // Es un operador que intercepta cualquier error en la solicitud HTTP y retorna un observable que emite un array vacío (of([])) en lugar de propagar el error.
-            catchError(() => of([]))
+            catchError( () => of([]) ),
+            // delay( 2000 )
         );
     }
 
