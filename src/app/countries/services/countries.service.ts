@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, delay, map, Observable, of } from 'rxjs';
 import { Country } from '../interfaces/country';
+import { CacheStore } from '../interfaces/cache-store.interface';
 
 @Injectable({providedIn: 'root'})
 export class CountriesService {
@@ -11,7 +12,16 @@ export class CountriesService {
      */
 
     // apiUrl: Almacena la URL base de la API https://restcountries.com/v3.1, que es utilizada para hacer las solicitudes HTTP.
-    private apiUrl: string = 'https://restcountries.com/v3.1'
+    private apiUrl: string = 'https://restcountries.com/v3.1';
+    
+    // Objeto
+    public cacheStore: CacheStore = {
+        // necesito grabar el termino de busqueda y los countries que pordujo el termino de busqueda
+        byCapital:   { term: '', countries: [] }, 
+        byCountries: { term: '', countries: [] }, 
+        byRegion:    { region: '', countries: [] } 
+    }
+    
     
     constructor(private http: HttpClient) { }
 
