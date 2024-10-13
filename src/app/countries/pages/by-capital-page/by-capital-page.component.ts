@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country';
 
@@ -7,7 +7,7 @@ import { Country } from '../../interfaces/country';
   templateUrl: './by-capital-page.component.html',
   styles: ``
 })
-export class ByCapitalPageComponent {
+export class ByCapitalPageComponent implements OnInit {
   /**
    * El ByCapitalPageComponent es el componente principal encargado de manejar la funcionalidad de búsqueda por capitales. 
    * Utiliza el componente hijo SearchBoxComponent para recibir un término de búsqueda ingresado por el usuario, y luego lo procesa
@@ -22,10 +22,16 @@ export class ByCapitalPageComponent {
    */
   public countries: Country[] = [];
   public isLoading: boolean = false;
+  public initialValue: string = '';
   
   constructor(
     private countriesServices: CountriesService
   ){}
+  
+  ngOnInit(): void {
+    this.countries = this.countriesServices.cacheStore.byCapital.countries;
+    this.initialValue = this.countriesServices.cacheStore.byCapital.term;
+  }
 
   /**
    * Este método se invoca cuando el usuario ingresa el nombre de una capital y presiona Enter. Llama al servicio CountriesService para realizar 
